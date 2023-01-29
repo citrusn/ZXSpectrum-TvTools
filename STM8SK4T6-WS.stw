@@ -1,0 +1,20 @@
+;	STMicroelectronics Workspace file
+
+[Version]
+Keyword=ST7Workspace-V0.7
+
+[Project0]
+Filename=..\stm8s_stdperiph_template\stvd\cosmic\stm8s105.stp
+Dependencies=
+
+[Project1]
+Filename=c:\progs\quartus\gameduino\testgd_spi\testgd_spi.stp
+Dependencies=
+
+[Project2]
+Filename=exti_interruptpriority\exti_interruptpriority.stp
+Dependencies=
+[Options]
+ActiveProject=exti_interruptpriority
+ActiveConfig=Debug
+AddSortedElements=1
