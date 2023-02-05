@@ -1,6 +1,7 @@
+#include <ESP8266WiFi.h>
 const byte linePin = D1;   // D1 Line HS
 const byte framePin = D2;  // D2 Frame VS
-const byte syncOut = D4;    // D4 TV sync out
+const byte syncOut = D4;   // D4 TV sync out
 // при подключенном к выходу Д4 ПАЛ-кодера ESP8266 не заводится,
 // надо отключить видео выход при включении питания Спектрума
 
@@ -25,6 +26,8 @@ IRAM_ATTR void lineSync() {
 
 void setup() {
   Serial.begin(19200);
+  WiFi.mode(WIFI_OFF);
+  WiFi.forceSleepBegin();
   pinMode(syncOut, OUTPUT);
   pinMode(linePin, INPUT_PULLUP);
   pinMode(framePin, INPUT_PULLUP);
